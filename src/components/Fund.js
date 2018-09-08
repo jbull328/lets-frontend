@@ -1,15 +1,17 @@
-import React from 'react';
+import React, { Component } from 'react';
 
 class Fund extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>We are going to have a funding component here.</div>
+            <div>
+                <h3>Donate to the Cause</h3>
+                <p>We are going to have a funding component here.</p>
+                <button>Donate</button>
+            </div>
 
         );
     }
 }
  
-export
-
-default Fund
+export default Fund;

@@ -10,6 +10,7 @@ import './App.css';
 import Projects from './components/Projects';
 import About from './components/About';
 import Landing from './components/Landing';
+import GetInvolved from './components/GetInvolved';
 
 class App extends Component {
   render() {
@@ -36,10 +37,17 @@ class App extends Component {
           <Route exact path="/" component={Landing} />
           <Route path="/Projects" component={Projects} />
           <Route path="/about" component={About} />
+          <Route path="/getInvolved" component={GetInvolved} />
         </Switch>
-          
+
+
+          <div className="footer">
+            <a href="https://jbull.co">About the creator</a>
+            <Link to="/getInvolved">Get Invovled</Link>
+          </div>  
         </div>
       </Router>
+      
       
     );
   }
