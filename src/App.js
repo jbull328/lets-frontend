@@ -19,14 +19,17 @@ class App extends Component {
         <header className="App-header container">
           <img src={logo} className="App-logo" alt="logo" />
           <div className="brand container">
-            <h1 className="App-title">Learn to Make things and work with Data!</h1>
+            <h1 className="App-title">Learn to make things, and work with Data!</h1>
             <h3 className="App-title">Let's Front End!</h3>
           </div>
          
           <div className="nav">
             <Link to="/" component={Landing}>Home</Link>
+            <hr/>
             <Link to="/about" component={About}>About</Link> 
+            <hr/>
             <Link to="/Projects" component={Projects}>Projects</Link>
+            <hr/>
           </div>   
         </header>
         <Switch>
