@@ -3,6 +3,9 @@ body {
   background: #FFAD5A;
 }
 
+.App {
+  background-image: url(./images/background.jpg);
+}
 .App-title {
   margin: 10px;
 }
@@ -47,8 +50,17 @@ body {
 /* .links a:active {
 
 } */
-
-.Landing {
+.topSection {
+  color: #fff;
+  text-align: left;
+  padding: 2rem 10%;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.4;
+  width: 650px;
+  margin: 7% auto;
+}
+.section {
   color: #fff;
   text-align: left;
   padding: 2rem 10%;
@@ -59,9 +71,14 @@ body {
   margin: 7% auto;
 }
 
-.Landing .sectionImage {
+.section .sectionImage {
   width: 380px;
   margin: 48px auto;
+}
+
+.footer {
+  height: 200px;
+  color: whitesmoke;
 }
 
 @media only screen and (max-width: 500px) {

@@ -4,7 +4,7 @@ class Fund extends Component {
     state = {  }
     render() { 
         return ( 
-            <div>
+            <div className="topSection">
                 <h3>Donate to the Cause</h3>
                 <p>We are going to have a funding component here.</p>
                 <button>Donate</button>

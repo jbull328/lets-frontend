@@ -13,7 +13,9 @@ import Landing from './components/Landing';
 import GetInvolved from './components/GetInvolved';
 
 class App extends Component {
+
   render() {
+    
     return (
       <Router>
         <div className="App">
@@ -41,10 +43,11 @@ class App extends Component {
         </Switch>
 
 
-          <div className="footer">
+          <footer className="footer">
             <a href="https://jbull.co">About the creator</a>
             <Link to="/getInvolved">Get Invovled</Link>
-          </div>  
+            <a href="https://www.freepik.com/free-vector/universe-background-with-astronaut-on-a-planet_1252976.htm">Designed by Freepik</a>
+          </footer>  
         </div>
       </Router>
       

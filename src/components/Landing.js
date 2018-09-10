@@ -5,7 +5,7 @@ import Fund from './Fund';
 class Landing extends Component {
     render() {
         return(
-            <div className="Landing">
+            <div className="Landing topSection">
                 <h2>Welcome to Let's Frontend!</h2>
                 <p>This will be some text about what we want to do!</p>
                 <button>Sign Up</button>
