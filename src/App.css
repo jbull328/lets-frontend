@@ -1,5 +1,5 @@
 body {
-  font-family: 'Raleway', sans-serif;
+  font-family: 'Rubik', sans-serif;
   background: #FFAD5A;
 }
 
@@ -14,7 +14,7 @@ body {
   background-color: #1A0841;
   height: auto;
   padding: 20px;
-  color: white;
+  color: #fff;
   font-size: 1.2em;
 } 
 
@@ -51,7 +51,7 @@ body {
 
 } */
 .topSection {
-  color: #fff;
+  color: darkslategray;
   text-align: left;
   padding: 2rem 10%;
   display: flex;
@@ -59,6 +59,9 @@ body {
   line-height: 1.4;
   width: 650px;
   margin: 7% auto;
+  background: #FFAD5A;
+  border-radius: 8.8px;
+  border: #FF5959 solid 15px;
 }
 .section {
   color: #fff;
@@ -109,4 +112,16 @@ body {
 
 .social {
   margin-right: 12px;
+}
+
+.footer a{
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+
+}
+
+.footer {
+  display: flex;
+  justify-content: space-evenly;
 }

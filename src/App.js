@@ -45,8 +45,8 @@ class App extends Component {
 
           <footer className="footer">
             <a href="https://jbull.co">About the creator</a>
-            <Link to="/getInvolved">Get Invovled</Link>
-            <a href="https://www.freepik.com/free-vector/universe-background-with-astronaut-on-a-planet_1252976.htm">Designed by Freepik</a>
+
+            <a href="https://www.freepik.com/free-vector/universe-background-with-astronaut-on-a-planet_1252976.htm">Background Designed by Freepik</a>
           </footer>  
         </div>
       </Router>
