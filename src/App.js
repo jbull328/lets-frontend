@@ -22,7 +22,7 @@ class App extends Component {
         <header className="App-header container">
           <img src={logo} className="App-logo" alt="logo" />
           <div className="brand container">
-            <h1 className="App-title">Learn to make things, and work with Data!</h1>
+            <h1 className="App-title">Learn to make UI components, and work with Data!</h1>
             <h3 className="App-title">Let's Front End!</h3>
           </div>
          
@@ -45,8 +45,8 @@ class App extends Component {
 
           <footer className="footer">
             <a href="https://jbull.co">About the creator</a>
-            <Link to="/getInvolved">Get Invovled</Link>
-            <a href="https://www.freepik.com/free-vector/universe-background-with-astronaut-on-a-planet_1252976.htm">Designed by Freepik</a>
+
+            <a href="https://www.freepik.com/free-vector/universe-background-with-astronaut-on-a-planet_1252976.htm">Background Designed by Freepik</a>
           </footer>  
         </div>
       </Router>
