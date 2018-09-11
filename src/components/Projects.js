@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import Auth from './Auth';
 
-const auth = new Auth();
-    auth.login()
 
 class Projects extends Component {
     ;
