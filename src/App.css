@@ -114,6 +114,11 @@ body {
   text-decoration: none;
 }
 
+.surveyLink {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
 .social {
   margin-right: 12px;
 }

@@ -21,7 +21,7 @@ class Landing extends Component {
                     your input will help us build a product that you 
                     and your fellow community want to use.</p>
 
-                    <a href="https://docs.google.com/forms/d/e/1FAIpQLSfekqgX1pzV4Cd9D8r2KsPX2n8CnGjI4mOJSJmpmziczHn_Hw/viewform?usp=sf_link">Help Us by filling out our survey.</a>
+                    <a  className="surveyLink" href="https://docs.google.com/forms/d/e/1FAIpQLSfekqgX1pzV4Cd9D8r2KsPX2n8CnGjI4mOJSJmpmziczHn_Hw/viewform?usp=sf_link">Help Us by filling out our survey.</a>
             </div>
         );
     }
