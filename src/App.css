@@ -110,6 +110,10 @@ body {
   }
 }
 
+.Landing a{
+  text-decoration: none;
+}
+
 .social {
   margin-right: 12px;
 }
