@@ -11,8 +11,24 @@ import Projects from './components/Projects';
 import About from './components/About';
 import Landing from './components/Landing';
 import GetInvolved from './components/GetInvolved';
+import createHistory from 'history/createBrowserHistory';
+import ReactGA from 'react-ga';
+
+
+//added history to allow for analytics
+const history = createHistory()
+  history.listen(location => {
+    ReactGA.set({ page: location.pathname })
+    ReactGA.pageview(location.pathname)
+  });
+
+
 
 class App extends Component {
+
+  componentDidMount() {
+		ReactGA.pageview(window.location.pathname)
+	}
 
   render() {
     
@@ -35,7 +51,7 @@ class App extends Component {
             <hr/>
           </div>   
         </header>
-        <Switch>
+        <Switch history={history}>
           <Route exact path="/" component={Landing} />
           <Route path="/Projects" component={Projects} />
           <Route path="/about" component={About} />

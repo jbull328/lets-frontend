@@ -4,6 +4,9 @@ import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import WebFont from 'webfontloader';
+import ReactGA from 'react-ga';
+
+ReactGA.initialize('UA-68850833-4');
 
 WebFont.load({
   google: {
