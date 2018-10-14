@@ -84,6 +84,19 @@ body {
   color: whitesmoke;
 }
 
+.login-signup {
+  display: block;
+  margin: 48px auto;
+  padding: 18px 28px;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  border-radius: 6.8px;
+  border: none;
+  background: #1ABC9C;
+  color: #1A0841;
+}
+
 @media only screen and (max-width: 500px) {
   body {
     width: 100%;

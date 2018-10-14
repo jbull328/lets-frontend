@@ -51,6 +51,7 @@ class App extends Component {
             <hr/>
           </div>   
         </header>
+        <button className="login-signup">Login/ Sign Up</button>
         <Switch history={history}>
           <Route exact path="/" component={Landing} />
           <Route path="/Projects" component={Projects} />
