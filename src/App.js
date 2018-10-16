@@ -14,9 +14,9 @@ import Landing from "./components/Landing";
 import GetInvolved from "./components/GetInvolved";
 import createHistory from "history/createBrowserHistory";
 import ReactGA from "react-ga";
-import Users from "./components/users/Users";
 import Callback from "./components/Callback";
-import auth0Client from "./auth";
+import SignIn from "./components/SignIn";
+import SecuredRoute from "./SecuredRoute/SecuredRoute";
 
 //added history to allow for analytics
 const history = createHistory();
@@ -24,11 +24,6 @@ history.listen(location => {
   ReactGA.set({ page: location.pathname });
   ReactGA.pageview(location.pathname);
 });
-
-const signOut = () => {
-  auth0Client.signOut();
-  history.replace("/");
-};
 
 class App extends Component {
   componentDidMount() {
@@ -47,7 +42,7 @@ class App extends Component {
               </h1>
               <h3 className="App-title">Let's Front End!</h3>
             </div>
-
+            <SignIn />
             <div className="nav">
               <Link to="/" component={Landing}>
                 Home
@@ -57,25 +52,18 @@ class App extends Component {
                 About
               </Link>
               <hr />
-              <Link to="/Projects" component={Projects}>
+              <Link to="/projects" component={Projects}>
                 Projects
-              </Link>
-              <hr />
-              <Link to="/users" component={Users}>
-                Users
               </Link>
               <hr />
             </div>
           </header>
-          <button className="login-signup" onClick={auth0Client.signIn}>
-            Login/ Sign Up
-          </button>
+
           <Switch history={history}>
             <Route exact path="/" component={Landing} />
-            <Route path="/Projects" component={Projects} />
+            <SecuredRoute path="/projects" component={Projects} />
             <Route path="/about" component={About} />
             <Route path="/getInvolved" component={GetInvolved} />
-            <Route path="/users" component={Users} />
             <Route exact path="/callback" component={Callback} />
           </Switch>
 
