@@ -12,12 +12,12 @@ function SignIn(props) {
     <div>
       {!auth0Client.isAuthenticated() && (
         <button className="login-signup" onClick={auth0Client.signIn}>
-          Login/ Sign Up
+          Login
         </button>
       )}
       {auth0Client.isAuthenticated() && (
         <div className="portfolio-icon">
-          <label className="portfolio-icon">
+          <label className="portfolio-icon-label">
             {auth0Client.getProfile().name}
           </label>
           <button
