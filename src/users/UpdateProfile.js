@@ -4,33 +4,74 @@ import axios from "axios";
 
 export default class UpdateProfile extends Component {
   state = {
-    user: {}
+    userName: "",
+    userEmail: "",
+    userTagline: "",
+    userAvatar: ""
   };
 
-  handleChange = event => {
-    this.setState({ user: event.target.value });
+  handleChange = async event => {
+    this.setState({ [event.target.name]: event.target.value });
   };
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
+    try {
+      const { userName, userEmail, userTagline, userAvatar } = this.state;
 
-    const UpdatedUser = {
-      user: this.state.user
-    };
+      await axios
+        .post(`http://localhost:8000/user/updateprofile`, {
+          userName,
+          userEmail,
+          userTagline,
+          userAvatar
+        })
+
+        .then(res => {
+          console.log(res);
+          console.log(res.data);
+        });
+    } catch (err) {
+      console.log(err);
+    }
   };
-  //   async axios.post(http://localhost:8000/user/update)
-  // }
-  // async componentDidMount() {}
+
+  async componentDidMount() {}
 
   render() {
+    const { userName, userEmail, userTagline, userAvatar } = this.state;
     return (
       <div>
-        <form>
-          <input type="text" name="user-name" placeholder="Full Name" />
-          <input type="email" name="user-email" placeholder="email" />
-          <input type="text" name="user-tagline" placeholder="About You" />
-          <input type="file" name="user-avatar" placeholder="Avatar" />
-          <input type="submit" name="user-submit" />
+        <form className="user-profile-edit" onSubmit={this.handleSubmit}>
+          <input
+            type="text"
+            name="userName"
+            placeholder="Full Name"
+            value={userName}
+            onChange={this.handleChange}
+          />
+          <input
+            type="email"
+            name="userEmail"
+            placeholder="email"
+            value={userEmail}
+            onChange={this.handleChange}
+          />
+          <input
+            type="text"
+            name="userTagline"
+            placeholder="About You"
+            value={userTagline}
+            onChange={this.handleChange}
+          />
+          <input
+            type="file"
+            name="userAvatar"
+            placeholder="Avatar"
+            value={userAvatar}
+            onChange={this.handleChange}
+          />
+          <input type="submit" name="userSubmit" />
         </form>
       </div>
     );

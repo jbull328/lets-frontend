@@ -24,16 +24,24 @@ class Projects extends Component {
     return (
       <nav>
         <div className="secondary-nav">
-          <Link to="/projects/profile" component={Profile}>
+          <Link
+            to="/projects/profile"
+            className="secondary-nav-boarder"
+            component={Profile}
+          >
             Profile
           </Link>
-          <Link to="/projects/currentStage" component={CurrentStage}>
+          <Link
+            to="/projects/currentStage"
+            className="secondary-nav-boarder"
+            component={CurrentStage}
+          >
             Current Stage
           </Link>
-          <div className="top-section">
+          <div className="secondary-nav-boarder">
             <h3> {auth0Client.getProfile().name}</h3>
             <img className="avatart" src="#" />
-            <Link to="/projects/:id/updateprofile" component={UpdateProfile}>
+            <Link to="/projects/user/updateprofile" component={UpdateProfile}>
               Edit Profile
             </Link>
           </div>
@@ -41,7 +49,10 @@ class Projects extends Component {
         <Switch history={history}>
           <Route path="/projects/profile" component={Profile} />
           <Route path="/projects/currentStage" component={CurrentStage} />
-          <Route path="/projects/:id/updateprofile" component={UpdateProfile} />
+          <Route
+            path="/projects/user/updateprofile"
+            component={UpdateProfile}
+          />
         </Switch>
       </nav>
     );
