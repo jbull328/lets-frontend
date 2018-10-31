@@ -2,7 +2,10 @@ import React, { Component } from "react";
 import auth0Client from "../auth";
 import axios from "axios";
 
-export default class UpdateProfile extends Component {
+import { updateUser } from "../actions/userActions";
+import { connect } from "react-redux";
+
+class UpdateProfile extends Component {
   state = {
     userName: "",
     userEmail: "",
@@ -77,3 +80,16 @@ export default class UpdateProfile extends Component {
     );
   }
 }
+
+const mapStateToProps = state => ({
+  user: state.user
+});
+
+const mapActionsToProps = {
+  onUpdateUser: updateUser
+};
+
+export default connect(
+  mapStateToProps,
+  mapActionsToProps
+)(UpdateProfile);
